@@ -24,16 +24,11 @@ createApp({
     async mounted() {
         for (let i = 0; i < 10; i++) {
 
-            axios
+            await axios
                 .get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then(response => {
                     console.log(response.data.response);
-                    this.emailList.push(response.data.response)
-
-                    // await fetchData1();
-                    // await fetchData2UsingData1();
-                    // doSomethingUsingData1And2();
-                    // this.dataReady = true;
+                    this.emailList.push(response.data.response);
                 })
         }
     }
