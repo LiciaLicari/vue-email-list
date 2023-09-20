@@ -29,7 +29,8 @@ createApp({
                 .then(response => {
                     console.log(response.data.response);
                     this.emailList.push(response.data.response);
-                })
+                });
         }
+        this.dataReady = true;
     }
 }).mount('#app')
