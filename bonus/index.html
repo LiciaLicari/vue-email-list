@@ -14,10 +14,10 @@
     <div id="app">
         <div class="container justify-content-center align-items-center m-5">
             <div v-if="dataReady">
-                <h3>Random mail List</h3>
-                <ul v-if="emailList.length === 10" class="email_list">
-                    <li class="email_list_item" v-for="email in emailList">{{email}}</li>
-                    <!-- /.email_list_item -->
+                <ul class="email_list">
+                    <h3>Random mail List</h3>
+                    <li class="singleEmail" v-for="email in emailList">{{email}}</li>
+                    <!-- /.singleEmail -->
                 </ul>
                 <!-- /.email_list -->
             </div>

@@ -21,10 +21,10 @@ createApp({
         }
     },
 
-    mounted() {
+    async mounted() {
         for (let i = 0; i < 10; i++) {
 
-            axios
+            await axios
                 .get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then(response => {
                     console.log(response.data.response);
@@ -35,6 +35,6 @@ createApp({
                     console.log(error);
                 });
         }
-        
+        this.dataReady = true;
     }
 }).mount('#app')
