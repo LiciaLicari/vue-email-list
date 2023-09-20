@@ -16,11 +16,12 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            dataReady: false,
             emailList: []
         }
     },
 
-    mounted() {
+    async mounted() {
         for (let i = 0; i < 10; i++) {
 
             axios
@@ -28,6 +29,11 @@ createApp({
                 .then(response => {
                     console.log(response.data.response);
                     this.emailList.push(response.data.response)
+
+                    // await fetchData1();
+                    // await fetchData2UsingData1();
+                    // doSomethingUsingData1And2();
+                    // this.dataReady = true;
                 })
         }
     }

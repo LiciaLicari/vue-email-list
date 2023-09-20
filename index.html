@@ -14,12 +14,14 @@
 
     <div id="app">
         <div class="container justify-content-center align-items-center m-5">
-
-            <ul class="email_list">
-                <li class="singleEmail" v-for="email in emailList">{{email}}</li>
-                <!-- /.singleEmail -->
-            </ul>
-            <!-- /.email_list -->
+            <div v-if="dataReady">
+                <ul class="email_list">
+                    <li class="singleEmail" v-for="email in emailList">{{email}}</li>
+                    <!-- /.singleEmail -->
+                </ul>
+                <!-- /.email_list -->
+            </div>
+            
         </div>
         <!-- ./container -->
 
