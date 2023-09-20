@@ -29,6 +29,10 @@ createApp({
                 .then(response => {
                     console.log(response.data.response);
                     this.emailList.push(response.data.response);
+                })
+
+                .catch(error => {
+                    console.log(error);
                 });
         }
         this.dataReady = true;
